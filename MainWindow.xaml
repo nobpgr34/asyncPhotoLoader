@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfPhotoViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:local="clr-namespace:WpfPhotoViewer"
+        Title="Photo Library"  MinWidth="600" >
+    <Window.Resources>
+        <DataTemplate x:Key="Home" DataType="{x:Type local:HomeViewModel}">
+            <local:HomeView />
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ContentControl  ContentTemplate="{DynamicResource Home}"></ContentControl>
+    </Grid>
+</Window>
